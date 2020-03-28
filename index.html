@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script type="text/javascript" src="script.js"></script>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<center> <h3 id = "tod" onmouseover="today();return false"> Hover/Touch here </h3></center>
+	<center> <h5>Enter your  DOB:</h5></center>
+	 <form method="post" name="ageform">
+            <center>  <div class="row" style="margin:10%">
+                 <div class="col">
+                    <input type="text" class="form-control" id="dd" placeholder="DD" required>
+                 </div>
+                <div class="col">
+                    <input type="text" class="form-control" id="mm" placeholder="MM" required>
+               </div>
+               <div class="col">
+                    <input type="text" class="form-control" id="yyyy" placeholder="YYYY" required>
+               </div>
+               
+            </div><br>
+            <center><h4 id="age"><b></b></h4><br></center>
+           <button  type="submit" class="btn btn-success" value="Get Age" onclick="printAge();return false">Get Age</button>
+     <button  class="btn btn-danger" onclick="window.reload();">Refresh</center>
+    </button></center>
+    </form>
+    <br><br><br>
+    <center><h2>Amount in Words:</h2></center><br>
+   <form> <center><div class="row">
+
+   	    	<div class="input-group  col-md-8" style="margin-left: 20%!important;margin-right: 20%!important;">
+               <input type="text" class="form-control col-md-6"  id= "amount" placeholder="Enter amount as 999999999.99">
+               <div class="input-group-append">
+               <button class="btn btn-success" type="submit" onclick = "printword();return false">In Words</button></div>
+             </div>
+             
+          </div> 
+          </center> 
+   </form> 
+   <br>
+   <div class=" col-md-6" id="amt" style="padding:25px;text-align: center;"></div>
+</body>
+<footer>
+	<br><center><h6 id="ft">&copy; 2020 <a href="mailto:proloy1999pb@gmail.com">Proloy Bhaduri</a></h6></center>
+	<span class="text-success btn" style="float: right;"><b>v1.0.0</b></span>
+</footer>
+</html>
