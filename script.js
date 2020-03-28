@@ -2,7 +2,8 @@
        Amount(digit) to amount(words) converter 
        v1.0.0
        Author: Proloy Bhaduri
-       Licensed Under MIT :
+       Copyright (c) 2020 Proloy Bhaduri
+       Licensed Under MIT :https://github.com/Proloy-Bhaduri/wordamount/blob/master/LICENSE
       */
 
        var var1;var var2;var var3;
