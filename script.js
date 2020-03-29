@@ -1,6 +1,6 @@
       /*
        Amount(digit) to amount(words) converter 
-       v1.0.0
+       v1.0.3
        Author: Proloy Bhaduri
        Copyright (c) 2020 Proloy Bhaduri
        Licensed Under MIT :https://github.com/Proloy-Bhaduri/wordamount/blob/master/LICENSE
@@ -104,7 +104,16 @@ function is_in_array(c,a,n) // Searching algo
                    }
           return false;
         }
-
+        var chk,m,o;
+function is_all_zero(chk,m)
+               {
+                 for(o=0;o<m-1;o++)
+                    { 
+                      if(chk[o]!= "0") return false;
+                    }
+          return true;
+               }
+console.log(is_all_zero("00000.51",5));               
 function  int_of_char(ch)
             {
                 let chi =  parseInt(ch);
@@ -129,9 +138,10 @@ function  int_of_char(ch)
                      if(str[q] != "." ) {return ("Wrong Format " + err_msg);}
                      a = int_of_char(str[len-2]);
                      b = int_of_char(str[len-1]);
+                     j  = len - 4;
+                     if(is_all_zero(str,q)) {money="Zero";}
                  }
-             else {a=0;b=0;}
-             if(str[len-3] != "." ) {return (err_msg);}
+             else {a=0;b=0;j=len-1;if(is_all_zero(str,len)) {money="Zero";}}
             while(i<len)
             {
                 if(!is_in_array(str[i],ch_set,p)){f=1;break;}
@@ -141,10 +151,6 @@ function  int_of_char(ch)
               else  return(err_msg);
               //valid statement
             k=0;
-           if(len>4)
-             {j = len - 4;}
-           else
-           { j = len - 4;}
              unit_place = parseInt(str[j]);
              console.log("j= "+j+"\nunit_place = "+ unit_place + "<br>");
             while(j>=0)
