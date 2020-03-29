@@ -188,7 +188,7 @@ function  int_of_char(ch)
                      money = h;
                  }
 
-                  else if(k == 3 && d_place!=0 && d1_place>0)
+                  else if(k == 3 && d_place>0 && d1_place>1)
                  {
                      h = " ";
                      h = t10s_set2[d1_place-1] +" "+digits_set[d_place-1]+" "+word_set1[k-1]+" "+ money;
@@ -198,6 +198,12 @@ function  int_of_char(ch)
                  {
                      h = " ";
                      h = digits_set[d_place-1]+" "+word_set1[k-1]+" "+money;
+                     money = h;
+                 }
+                 else if(k == 3 && d_place>0 && d1_place==1)
+                 {
+                     h = " ";
+                     h = teens_set2[d_place-1]+" "+word_set1[k-1]+" "+money;
                      money = h;
                  }
                  else if(k == 3 && d_place!=0 && str[j-1]==undefined)
@@ -213,7 +219,7 @@ function  int_of_char(ch)
                      money = h;
                  }
 
-                 else if(k == 5 && d_place!=0 && d1_place>0)
+                 else if(k == 5 && d_place!=0 && d1_place>1)
                  {
                      h = " ";
                      h = t10s_set2[d1_place-1]+" "+digits_set[d_place-1]+" "+word_set1[k-2]+" "+money;
@@ -225,13 +231,19 @@ function  int_of_char(ch)
                      h = digits_set[d_place-1]+" "+word_set1[k-2]+" "+money;
                      money = h;
                  }
+                 else if(k == 5 && d_place>0 && d1_place==1 )
+                 {
+                     h = " ";
+                     h = teens_set2[d_place-1]+" "+word_set1[k-2]+" "+money;
+                     money = h;
+                 }
                  else if(k == 5 && d_place!=0 && str[j-1]==undefined )
                  {
                      h = " ";
                      h = digits_set[d_place-1]+" "+word_set1[k-2]+" "+money;
                      money = h;
                  }
-                 else if(k == 5 && d_place==0 && d1_place>0)
+                 else if(k == 5 && d_place==0 && d1_place>1)
                  {
                      h = "";
                      h = t10s_set2[d1_place-1] +" " +word_set1[k-2]+" " +money;
@@ -241,6 +253,12 @@ function  int_of_char(ch)
                  {
                      h = " " ;
                      h = t10s_set2[d1_place-1]+" " +digits_set[d_place-1]+" "+word_set1[4]+" "+money;
+                     money = h;
+                 }
+                 else if(k == 7 && d_place>0 && d1_place==1 )
+                 {
+                     h = " ";
+                     h = teens_set2[d_place-1]+" "+word_set1[k-2]+" "+money;
                      money = h;
                  }
                  else if(k == 7 && d_place!=0 && d1_place<=0)
