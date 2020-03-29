@@ -108,12 +108,9 @@ function is_in_array(c,a,n) // Searching algo
 function is_all_zero(chk,m)
                {
                  for(o=0;o<m-1;o++)
-                    { 
-                      if(chk[o]!= "0") return false;
-                    }
+                    if(chk[o]!= "0") return false;
           return true;
-               }
-console.log(is_all_zero("00000.51",5));               
+               }              
 function  int_of_char(ch)
             {
                 let chi =  parseInt(ch);
