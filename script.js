@@ -307,3 +307,8 @@ function printword()
     document.getElementById("amt").innerHTML= to_words(inp);
     document.getElementById("amt").className += "alert alert-success";
   }  
+(function () {
+      const d = new Date();
+      let year = d.getFullYear();
+      document.getElementById("pb_year").innerHTML = year;
+})();
